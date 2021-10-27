@@ -16,37 +16,15 @@ require_once __DIR__ . "/movie-logic/index.php";
 <body>
     <div>
         <section>
-            <h1><?php echo $LOTR-> titolo() ?></h1>
-            <h3><?php echo $LOTR-> regista ?></h3>
-            <h3><?php echo $LOTR-> dataUscita ?></h3>
-            <h4><?php echo $LOTR-> minutaggio ?> min</h4>
-            <h4><?php echo $LOTR-> versione() ?></h4>
-            <p><?php echo $LOTR-> trama ?></p>
+            <?php foreach($movies as $movie) { ?>
+            <h1><?php echo $movie-> stampatitolo() ?></h1>
+            <address><h3><?php echo $movie-> regista ?></h3></address>
+            <h3><?php echo $movie-> dataUscita ?></h3>
+            <h4><?php echo $movie-> minutaggio ?> min</h4>
+            <h4><?php echo $movie-> stampaVersione() ?></h4>
+            <p><?php echo $movie-> stampaTrama() ?></p>
+            <?php } ?>
         </section>
     </div>
-
-    <div>
-        <section>
-            <h1><?php echo $LOTR2-> titolo() ?></h1>
-            <h3><?php echo $LOTR2-> regista ?></h3>
-            <h3><?php echo $LOTR2-> dataUscita ?></h3>
-            <h4><?php echo $LOTR2-> minutaggio ?> min</h4>
-            <h4><?php echo $LOTR2-> versione() ?></h4>
-            <p><?php echo $LOTR2-> trama ?></p>
-        </section>
-    </div>
-
-    <div>
-        <section>
-            <h1><?php echo $LOTR3-> titolo() ?></h1>
-            <h3><?php echo $LOTR3-> regista ?></h3>
-            <h3><?php echo $LOTR3-> dataUscita ?></h3>
-            <h4><?php echo $LOTR3-> minutaggio ?> min</h4>
-            <h4><?php echo $LOTR3-> versione() ?></h4>
-            <p><?php echo $LOTR3-> trama ?></p>
-        </section>
-    </div>
- 
-    
 </body>
 </html>
