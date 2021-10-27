@@ -25,6 +25,7 @@ require_once __DIR__ . "/movie-logic/index.php";
                 </address>
                 <h3><?php echo $movie->dataUscita ?></h3>
                 <h4><?php echo $movie->minutaggio ?> min</h4>
+                <h4><?php echo $movie->tipoFilm() ?></h4>
                 <h4><?php echo $movie->stampaVersione() ?></h4>
                 <p><?php echo $movie->stampaTrama() ?></p>
             <?php } ?>
